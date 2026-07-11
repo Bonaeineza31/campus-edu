@@ -4,6 +4,11 @@ import BicWorkflow from './components/BicWorkflow'
 import MonthlyCycle from './components/MonthlyCycle'
 import MonthlyThemes from './components/MonthlyThemes'
 import Stakeholders from './components/Stakeholders'
+import campusImage from '../../assets/slide2.png'
+import bicImage from '../../assets/slide3.png'
+import workshopImage from '../../assets/slide4.png'
+import stakeholderImage from '../../assets/slide6.png'
+import ctaImage from '../../assets/slide1.png'
 import './student-corner.css'
 
 export default function StudentCorner() {
@@ -29,6 +34,19 @@ export default function StudentCorner() {
           and mentorship through a three-component framework.
         </p>
       </header>
+
+      {/* Banner collage */}
+      <div className="sc-banner">
+        <div className="sc-collage">
+          <div className="sc-collage-main">
+            <img src="/happy_students.png" alt="Students collaborating at a career readiness and innovation session" />
+          </div>
+          <div className="sc-collage-accent accent-right">
+            <img src={campusImage} alt="Students walking across the innovation hub campus" />
+          </div>
+          <span className="sc-collage-caption">Career readiness &amp; innovation, in session</span>
+        </div>
+      </div>
 
       <main className="sc-content">
         {/* Methodology intro */}
@@ -65,6 +83,17 @@ export default function StudentCorner() {
             <div className="sc-section-bar"></div>
           </div>
           <BicWorkflow />
+          <div className="sc-inline-banner">
+            <div className="sc-collage sc-collage-sm">
+              <div className="sc-collage-main">
+                <img src={bicImage} alt="A student exploring an innovation challenge with immersive tech" />
+              </div>
+              <div className="sc-collage-accent accent-left">
+                <img src={workshopImage} alt="Students receiving pitch coaching and mentorship during a bootcamp" />
+              </div>
+              <span className="sc-collage-caption">Bootcamp week — pitch coaching &amp; mentorship for the Top 5</span>
+            </div>
+          </div>
         </section>
 
         {/* Monthly cycle wheel */}
@@ -98,14 +127,31 @@ export default function StudentCorner() {
             <h2 className="sc-section-title">Invited each month, by theme</h2>
             <div className="sc-section-bar"></div>
           </div>
-          <Stakeholders />
+          <div className="sc-split reverse">
+            <div className="sc-split-media">
+              <div className="sc-collage sc-collage-sm">
+                <div className="sc-collage-main">
+                  <img src={stakeholderImage} alt="Stakeholders networking at a mentorship symposium" />
+                </div>
+                <div className="sc-collage-accent accent-right">
+                  <img src={ctaImage} alt="Students and mentors reviewing data during a design session" />
+                </div>
+              </div>
+            </div>
+            <div className="sc-split-content">
+              <Stakeholders />
+            </div>
+          </div>
         </section>
 
         {/* Closing CTA */}
-        <section className="sc-cta">
-          <h3>Ready to be part of the next cycle?</h3>
-          <p>Applications open every month — bring your idea, your voice, or your network.</p>
-          <Link to="/#contact" className="sc-cta-btn">Connect With Us</Link>
+        <section className="sc-cta" style={{ backgroundImage: `url(${ctaImage})` }}>
+          <div className="sc-cta-overlay"></div>
+          <div className="sc-cta-inner">
+            <h3>Ready to be part of the next cycle?</h3>
+            <p>Applications open every month — bring your idea, your voice, or your network.</p>
+            <Link to="/#contact" className="sc-cta-btn">Connect With Us</Link>
+          </div>
         </section>
       </main>
     </div>

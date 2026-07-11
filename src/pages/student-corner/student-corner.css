@@ -43,7 +43,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: #555;
+  color: var(--text-secondary, #555);
   font-size: 0.9rem;
   font-weight: 600;
   text-decoration: none;
@@ -57,7 +57,7 @@
 .sc-hero {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 80px 40px 60px;
+  padding: 48px 40px 32px;
   text-align: center;
 }
 
@@ -91,9 +91,9 @@
 
 .sc-hero-desc {
   font-size: 1.2rem;
-  color: #666;
+  color: var(--text-secondary, #666);
   max-width: 650px;
-  margin: 0 auto 48px;
+  margin: 0 auto;
   line-height: 1.7;
 }
 
@@ -107,14 +107,14 @@
    Shared section header
    ===================== */
 .sc-section {
-  margin-bottom: 96px;
+  margin-bottom: 56px;
   opacity: 1;
   transform: none;
 }
 
 .sc-section-header {
   max-width: 720px;
-  margin: 0 auto 48px;
+  margin: 0 auto 28px;
 }
 
 .sc-section-header.text-center {
@@ -155,7 +155,7 @@
 }
 
 .sc-section-desc {
-  color: #666;
+  color: var(--text-secondary, #666);
   font-size: 1.05rem;
   line-height: 1.7;
 }
@@ -175,10 +175,10 @@
   position: relative;
   flex: 1 1 280px;
   max-width: 340px;
-  background: #fff;
+  background: var(--bg-secondary, #fff);
   border-radius: 20px;
   padding: 32px 28px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--border-color, rgba(0, 0, 0, 0.06));
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
 }
 
@@ -235,7 +235,7 @@
 
 .pillar-short {
   font-weight: 600;
-  color: #999;
+  color: var(--text-tertiary, #999);
   font-size: 0.9rem;
 }
 
@@ -256,7 +256,7 @@
 
 .pillar-lines span {
   font-size: 0.92rem;
-  color: #666;
+  color: var(--text-secondary, #666);
   line-height: 1.5;
 }
 
@@ -299,8 +299,8 @@
 
 .bic-step {
   width: 180px;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: var(--bg-secondary, #fff);
+  border: 1px solid var(--border-color, rgba(0, 0, 0, 0.06));
   border-radius: 16px;
   padding: 20px 18px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
@@ -328,7 +328,7 @@
 
 .bic-step p {
   font-size: 0.85rem;
-  color: #666;
+  color: var(--text-secondary, #666);
   line-height: 1.5;
 }
 
@@ -340,7 +340,7 @@
 .bic-step-arrow {
   flex-shrink: 0;
   font-size: 1.3rem;
-  color: #ccc;
+  color: var(--text-tertiary, #ccc);
   font-weight: 700;
 }
 
@@ -369,7 +369,7 @@
 
 .bic-loop p {
   font-size: 0.85rem;
-  color: #666;
+  color: var(--text-secondary, #666);
 }
 
 /* =====================
@@ -377,13 +377,13 @@
    ===================== */
 .cycle-wheel-wrap {
   position: relative;
-  max-width: 720px;
-  min-height: 620px;
+  max-width: 620px;
+  min-height: 460px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
-  gap: 24px;
+  gap: 12px;
   align-items: center;
 }
 
@@ -391,8 +391,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 380px;
-  height: 380px;
+  width: 300px;
+  height: 300px;
   transform: translate(-50%, -50%);
   border: 2px dashed rgba(251, 176, 59, 0.35);
   border-radius: 50%;
@@ -438,8 +438,8 @@
 .cycle-node {
   position: relative;
   z-index: 1;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: var(--bg-secondary, #fff);
+  border: 1px solid var(--border-color, rgba(0, 0, 0, 0.06));
   border-radius: 16px;
   padding: 18px 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
@@ -470,7 +470,7 @@
 
 .cycle-node p {
   font-size: 0.82rem;
-  color: #666;
+  color: var(--text-secondary, #666);
   max-width: 220px;
   line-height: 1.5;
 }
@@ -524,8 +524,8 @@
   display: flex;
   align-items: center;
   gap: 14px;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: var(--bg-secondary, #fff);
+  border: 1px solid var(--border-color, rgba(0, 0, 0, 0.06));
   border-radius: 14px;
   padding: 16px 18px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
@@ -571,8 +571,8 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: var(--bg-secondary, #fff);
+  border: 1px solid var(--border-color, rgba(0, 0, 0, 0.06));
   border-radius: 14px;
   padding: 16px 18px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
@@ -605,7 +605,7 @@
 .stakeholder-roles-label {
   display: block;
   font-size: 0.85rem;
-  color: #666;
+  color: var(--text-secondary, #666);
   margin-bottom: 14px;
 }
 
@@ -626,26 +626,171 @@
 }
 
 /* =====================
+   Banner images
+   ===================== */
+.sc-banner {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto 48px;
+  padding: 0 40px;
+}
+
+.sc-inline-banner {
+  position: relative;
+  margin-top: 24px;
+}
+
+/* =====================
+   Photo collage (main + overlapping accent)
+   ===================== */
+.sc-collage {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.sc-collage-main img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+}
+
+.sc-collage.sc-collage-sm .sc-collage-main img {
+  height: 240px;
+}
+
+.sc-collage-caption {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 6px 16px;
+  border-radius: 20px;
+}
+
+.sc-collage-accent {
+  position: absolute;
+  width: 42%;
+  background: #fff;
+  padding: 6px;
+  border-radius: 14px;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease;
+}
+
+.sc-collage-accent img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 9px;
+  display: block;
+}
+
+.sc-collage-accent.accent-right {
+  right: -20px;
+  bottom: -30px;
+  transform: rotate(6deg);
+}
+
+.sc-collage-accent.accent-left {
+  left: -20px;
+  bottom: -30px;
+  transform: rotate(-6deg);
+}
+
+.sc-collage-accent:hover {
+  transform: rotate(0deg) scale(1.04);
+}
+
+@media (max-width: 640px) {
+  .sc-collage-main img {
+    height: 240px;
+  }
+  .sc-collage.sc-collage-sm .sc-collage-main img {
+    height: 200px;
+  }
+  .sc-collage-accent {
+    width: 48%;
+  }
+  .sc-collage-accent img {
+    height: 100px;
+  }
+}
+
+/* =====================
+   Split section (image + content)
+   ===================== */
+.sc-split {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.sc-split.reverse {
+  grid-template-columns: 1.1fr 0.9fr;
+}
+
+.sc-split.reverse .sc-split-media {
+  order: 2;
+}
+
+.sc-split-media {
+  padding-bottom: 20px;
+}
+
+@media (max-width: 860px) {
+  .sc-split,
+  .sc-split.reverse {
+    grid-template-columns: 1fr;
+  }
+  .sc-split.reverse .sc-split-media {
+    order: 0;
+  }
+}
+
+/* =====================
    Closing CTA
    ===================== */
 .sc-cta {
+  position: relative;
   opacity: 1;
   transform: none;
   text-align: center;
-  background: linear-gradient(135deg, rgba(77, 144, 232, 0.08), rgba(251, 176, 59, 0.08));
+  background-size: cover;
+  background-position: center;
   border-radius: 24px;
   padding: 56px 32px;
+  overflow: hidden;
+}
+
+.sc-cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.82), rgba(77, 144, 232, 0.55));
+}
+
+.sc-cta-inner {
+  position: relative;
+  z-index: 1;
 }
 
 .sc-cta h3 {
   font-size: 1.5rem;
   font-weight: 800;
   margin-bottom: 10px;
-  color: var(--text-primary, #1a1a2e);
+  color: #fff;
 }
 
 .sc-cta p {
-  color: #666;
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 24px;
 }
 
@@ -663,4 +808,28 @@
 .sc-cta-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(77, 144, 232, 0.35);
+}
+
+/* =====================
+   Dark mode adjustments
+   ===================== */
+.theme-dark .sc-topbar {
+  background: rgba(16, 23, 38, 0.85);
+  border-bottom-color: var(--border-color);
+}
+
+.theme-dark .pillar-num {
+  color: rgba(255, 255, 255, 0.08);
+}
+
+.theme-dark .sc-hero-badge {
+  background: rgba(77, 144, 232, 0.15);
+}
+
+.theme-dark .sc-collage-main img {
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+}
+
+.theme-dark .sc-collage-accent {
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.6);
 }
