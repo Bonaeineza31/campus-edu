@@ -6,7 +6,7 @@ export default function Header({ theme, toggleTheme }) {
       <div className="header-inner">
         <a href="#" className="logo-container">
           <div className="logo-wrapper">
-            <img src="/logo.jpg" alt="The Campus EDU Logo" className="header-logo" />
+            <img src="/logo.png" alt="The Campus EDU Logo" className="header-logo" />
           </div>
           <div className="logo-text">
             <span className="logo-title">THE CAMPUS <span className="logo-highlight">EDU</span></span>

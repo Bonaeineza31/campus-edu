@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import fitz\")",
+      "Bash(python -m pip show pymupdf pillow)",
+      "Bash(python -c \"import PIL; print\\('PIL ok'\\)\")",
+      "Bash(python -m pip install --quiet pymupdf)",
+      "Bash(python -c \"import fitz; print\\('ok', fitz.__doc__\\)\")",
+      "Bash(find /c/Users/bduho -iname \"*campus*logo*\" -mtime -1 2>/dev/null | grep -v node_modules; echo \"---downloads---\"; find /c/Users/bduho/Downloads -iname \"*.pdf\" -mtime -2 2>/dev/null)",
+      "Read(//c/Users/bduho/**)",
+      "Read(//c/Users/bduho/Downloads/**)",
+      "Bash(find /c/Users/bduho -maxdepth 6 -iname \"*Campus*Logo*\" 2>/dev/null)",
+      "Bash(cat \"C:\\\\Users\\\\bduho\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-bduho-campus-edu\\\\93af0d83-3a47-4265-84f2-05c7eaebf31e\\\\tasks\\\\b6zrkglti.output\" 2>/dev/null; echo \"===\"; find /c/Users/bduho -maxdepth 4 -iname \"*.pdf\" -newer /c/Users/bduho/campus-edu/package.json 2>/dev/null)"
+    ]
+  }
+}

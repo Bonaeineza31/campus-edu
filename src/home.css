@@ -121,11 +121,7 @@
 }
 
 .logo-highlight {
-  color: var(--text-primary);
-}
-
-.theme-dark .logo-highlight {
-  color: #ffffff;
+  color: inherit;
 }
 
 .logo-subtitle {

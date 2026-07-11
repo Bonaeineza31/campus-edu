@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="footer-brand">
             <div className="logo-container">
               <div className="logo-wrapper">
-                <img src="/logo.jpg" alt="The Campus EDU Logo" className="footer-logo" />
+                <img src="/logo.png" alt="The Campus EDU Logo" className="footer-logo" />
               </div>
               <div className="logo-text">
                 <span className="logo-title">THE CAMPUS <span className="logo-highlight">EDU</span></span>
