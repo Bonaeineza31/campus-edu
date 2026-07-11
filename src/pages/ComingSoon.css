@@ -1,0 +1,95 @@
+/* =====================
+   Coming Soon Page
+   ===================== */
+.coming-soon-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-primary, #f8f9fa);
+  color: var(--text-primary, #1a1a2e);
+  text-align: center;
+  padding: 40px 24px;
+  font-family: var(--font-body, 'Inter', sans-serif);
+}
+
+.coming-soon-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #4d90e8, #fbb03b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.coming-soon-title {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  color: var(--text-primary, #1a1a2e);
+}
+
+.coming-soon-program {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
+  background: linear-gradient(135deg, #4d90e8 0%, #fbb03b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 24px;
+}
+
+.coming-soon-desc {
+  font-size: 1.15rem;
+  color: var(--text-secondary, #555);
+  max-width: 520px;
+  line-height: 1.7;
+  margin-bottom: 48px;
+}
+
+.coming-soon-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #4d90e8;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(77, 144, 232, 0.35);
+}
+
+.coming-soon-back:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(77, 144, 232, 0.5);
+  background-color: #3a7bd5;
+}
+
+.coming-soon-dots {
+  display: flex;
+  gap: 12px;
+  margin-top: 60px;
+}
+
+.coming-soon-dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4d90e8, #fbb03b);
+  animation: dot-bounce 1.4s infinite ease-in-out;
+}
+
+.coming-soon-dots span:nth-child(2) { animation-delay: 0.2s; }
+.coming-soon-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes dot-bounce {
+  0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+  40% { transform: scale(1.2); opacity: 1; }
+}

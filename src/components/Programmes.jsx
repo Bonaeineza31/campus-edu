@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Programmes({ isVisible }) {
   const [activeTab, setActiveTab] = useState('all')
@@ -7,6 +8,7 @@ export default function Programmes({ isVisible }) {
   const programs = [
     {
       id: 'student-corner',
+      route: '/student-corner',
       title: 'Student Corner',
       tag: 'Dialogue & Network',
       description: 'Creates structured spaces for career dialogue, entrepreneurial thinking, and mentorship through a three-component framework.',
@@ -27,6 +29,7 @@ export default function Programmes({ isVisible }) {
     },
     {
       id: 'soft-skills',
+      route: '/soft-skills',
       title: 'Soft Skills Lab',
       tag: 'Employability',
       description: 'Delivers practical, transferable skills like communication, collaboration, critical thinking, and workplace navigation that formal curricula often underserve.',
@@ -43,6 +46,7 @@ export default function Programmes({ isVisible }) {
     },
     {
       id: 'mobile-campus',
+      route: '/mobile-campus',
       title: 'Mobile Campus',
       tag: 'Access',
       description: 'Takes education support directly to schools and communities, removing geographic barriers and bringing premium career resources outside urban zones.',
@@ -59,6 +63,7 @@ export default function Programmes({ isVisible }) {
     },
     {
       id: 'career-tour',
+      route: '/career-tour',
       title: 'Career Tour',
       tag: 'Exposure',
       description: 'A cohort-based programme where students visit their dream companies to see roles up close, meet teams, and understand the work they will do in the future.',
@@ -74,6 +79,7 @@ export default function Programmes({ isVisible }) {
     },
     {
       id: 'tvet-digital',
+      route: '/tvet-digital',
       title: 'TVET Digital Lab',
       tag: 'Digital Learning',
       description: 'An online practical lab across different TVET disciplines, giving learners a way to practise and build competence beyond the physical classroom.',
@@ -90,6 +96,7 @@ export default function Programmes({ isVisible }) {
     },
     {
       id: 'campus-store',
+      route: '/campus-store',
       title: 'The Campus Store',
       tag: 'Access to Tools',
       description: 'Improves access to learning materials—like loaned laptops—through innovative agreements that lower upfront barriers for students.',
@@ -181,15 +188,15 @@ export default function Programmes({ isVisible }) {
                 </div>
               </div>
 
-              <button 
+              <Link
+                to={prog.route}
                 className="btn-card-toggle"
-                onClick={() => setExpandedProgram(isExpanded ? null : prog.id)}
               >
-                {isExpanded ? 'Read Less' : 'Learn More & Details'}
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={`arrow-icon ${isExpanded ? 'up' : 'down'}`}>
-                  <polyline points="6 9 12 15 18 9" />
+                Explore Programme
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="arrow-icon down">
+                  <polyline points="9 18 15 12 9 6" />
                 </svg>
-              </button>
+              </Link>
             </div>
           );
         })}
@@ -197,3 +204,4 @@ export default function Programmes({ isVisible }) {
     </section>
   )
 }
+
