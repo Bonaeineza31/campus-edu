@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './topSlideshow.css';
 
 import slide1 from '../assets/slide1.png';
@@ -13,37 +14,43 @@ const slides = [
     image: slide6,
     title: 'Student Corner',
     description: 'Structured spaces for career dialogue, entrepreneurial thinking, and mentorship.',
-    buttonText: 'Join the Discussion'
+    buttonText: 'Join the Discussion',
+    route: '/student-corner'
   },
   {
     image: slide4,
     title: 'Soft Skills Lab',
     description: 'Practical, transferable skills like communication, collaboration, and critical thinking.',
-    buttonText: 'Learn More'
+    buttonText: 'Learn More',
+    route: '/soft-skills'
   },
   {
     image: slide5,
     title: 'Mobile Campus',
     description: 'Taking education support directly to schools and communities.',
-    buttonText: 'Explore Mobile Campus'
+    buttonText: 'Explore Mobile Campus',
+    route: '/mobile-campus'
   },
   {
     image: slide1,
     title: 'Career Tour',
     description: 'Visit your dream companies and see the roles you aspire to up close.',
-    buttonText: 'Take a Tour'
+    buttonText: 'Take a Tour',
+    route: '/career-tour'
   },
   {
     image: slide2,
     title: 'TVET Digital Lab',
     description: 'An online practical lab for TVET disciplines, allowing you to build competence anywhere.',
-    buttonText: 'Start Practicing'
+    buttonText: 'Start Practicing',
+    route: '/tvet-digital'
   },
   {
     image: slide3,
     title: 'The Campus Store',
     description: 'Improving access to learning materials with deferred-payment models.',
-    buttonText: 'Access Tools'
+    buttonText: 'Access Tools',
+    route: '/campus-store'
   }
 ];
 
@@ -73,7 +80,7 @@ export default function TopSlideshow() {
             <div className="slide-content">
               <h2>{slide.title}</h2>
               <p>{slide.description}</p>
-              <button className="slide-btn">{slide.buttonText}</button>
+              <Link to={slide.route} className="slide-btn">{slide.buttonText}</Link>
             </div>
           </div>
         </div>
