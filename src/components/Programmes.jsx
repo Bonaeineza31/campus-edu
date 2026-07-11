@@ -6,6 +6,26 @@ export default function Programmes({ isVisible }) {
 
   const programs = [
     {
+      id: 'student-corner',
+      title: 'Student Corner',
+      tag: 'Dialogue & Network',
+      description: 'Creates structured spaces for career dialogue, entrepreneurial thinking, and mentorship through a three-component framework.',
+      components: [
+        'Structured Career Dialogue — facilitated conversations connecting students with industry professionals.',
+        'Entrepreneurial Innovation Challenge — a competition that develops problem-solving and business thinking.',
+        'Exhibition-Mentorship Session — learners present work and receive direct feedback from mentors.'
+      ],
+      format: 'Interactive student forums, competitions, and mentor exhibitions.',
+      outcome: 'Students develop career clarity and professional networks before graduation.',
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="prog-icon">
+          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+          <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+          <line x1="12" y1="22.08" x2="12" y2="12" />
+        </svg>
+      )
+    },
+    {
       id: 'soft-skills',
       title: 'Soft Skills Lab',
       tag: 'Employability',
@@ -34,26 +54,6 @@ export default function Programmes({ isVisible }) {
           <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
           <circle cx="5.5" cy="18.5" r="2.5" />
           <circle cx="18.5" cy="18.5" r="2.5" />
-        </svg>
-      )
-    },
-    {
-      id: 'student-corner',
-      title: 'Student Corner',
-      tag: 'Dialogue & Network',
-      description: 'Creates structured spaces for career dialogue, entrepreneurial thinking, and mentorship through a three-component framework.',
-      components: [
-        'Structured Career Dialogue — facilitated conversations connecting students with industry professionals.',
-        'Entrepreneurial Innovation Challenge — a competition that develops problem-solving and business thinking.',
-        'Exhibition-Mentorship Session — learners present work and receive direct feedback from mentors.'
-      ],
-      format: 'Interactive student forums, competitions, and mentor exhibitions.',
-      outcome: 'Students develop career clarity and professional networks before graduation.',
-      icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="prog-icon">
-          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-          <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
-          <line x1="12" y1="22.08" x2="12" y2="12" />
         </svg>
       )
     },

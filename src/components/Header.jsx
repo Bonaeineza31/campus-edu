@@ -19,8 +19,6 @@ export default function Header({ theme, toggleTheme }) {
           <a href="#problems">The Problem</a>
           <a href="#approach">Our Approach</a>
           <a href="#programmes">Programmes</a>
-          <a href="#impact">Impact</a>
-          <a href="#sustainability">Sustainability</a>
         </nav>
 
         <div className="header-actions">
