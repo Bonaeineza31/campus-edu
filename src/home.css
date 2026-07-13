@@ -170,6 +170,55 @@
   gap: 16px;
 }
 
+.main-nav .nav-cta {
+  display: none;
+}
+
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburger-btn span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--text-primary);
+  border-radius: 2px;
+  transition: transform var(--transition-speed) ease, opacity var(--transition-speed) ease;
+}
+
+.hamburger-btn.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-btn.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-overlay {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 98;
+}
+
 .theme-toggle {
   background: none;
   border: 1px solid var(--border-color);
@@ -489,6 +538,133 @@ main section.active {
   color: var(--text-secondary);
   margin-top: 16px;
   line-height: 1.6;
+}
+
+/* About Section (Our Story) */
+.about-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 100px 24px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 100px;
+}
+
+.about-stat-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 28px 24px;
+  box-shadow: var(--shadow-md);
+  text-align: left;
+}
+
+.about-stat-number {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2.6rem;
+  font-weight: 800;
+  line-height: 1.1;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-stat-label {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.about-timeline {
+  position: relative;
+  padding-left: 32px;
+}
+
+.about-timeline::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 100%);
+}
+
+.about-milestone {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.about-milestone:last-child {
+  margin-bottom: 0;
+}
+
+.about-milestone-marker {
+  position: absolute;
+  left: -32px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  border: 3px solid var(--bg-primary);
+  box-shadow: 0 0 0 2px var(--primary);
+}
+
+.about-milestone-marker-current {
+  background-color: var(--secondary);
+  box-shadow: 0 0 0 2px var(--secondary), 0 0 16px rgba(var(--secondary-rgb), 0.5);
+}
+
+.about-milestone-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.about-milestone-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.about-milestone-content strong {
+  color: var(--text-primary);
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about-stats {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .about-stat-card {
+    flex: 1 1 160px;
+  }
 }
 
 /* Who We Are Section */
@@ -1897,8 +2073,46 @@ main section.active {
 }
 
 @media (max-width: 768px) {
-  .main-nav {
+  .hamburger-btn {
+    display: flex;
+  }
+  .desktop-cta {
     display: none;
+  }
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background-color: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow-lg);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height var(--transition-speed) ease, opacity var(--transition-speed) ease;
+  }
+  .main-nav.open {
+    max-height: 400px;
+    opacity: 1;
+  }
+  .main-nav a {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .main-nav a::after {
+    display: none;
+  }
+  .main-nav .nav-cta {
+    display: block;
+    text-align: center;
+    margin: 16px 24px;
+    border-bottom: none;
+    color: #ffffff;
   }
   .hero-title {
     font-size: 2.6rem;

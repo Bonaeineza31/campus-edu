@@ -1,8 +1,8 @@
 const steps = [
   { week: 'Wk 1', title: 'Open Call', desc: 'Applications open (1 week)' },
   { week: 'Wk 2', title: 'Selection', desc: 'Review → Top 20 shortlisted' },
-  { week: 'Wed', title: 'Pitch', desc: 'Short pitch session · Top 5 finalists chosen' },
-  { week: 'Wed', title: 'Bootcamp', desc: 'Mentorship & pitch coaching for Top 5' },
+  { week: 'Wk 3', title: 'Pitch', desc: 'Short pitch session · Top 5 finalists chosen' },
+  { week: 'Wk 4', title: 'Bootcamp', desc: 'Mentorship & pitch coaching for Top 5' },
   { week: 'Thu (Wk 3)', title: 'Final', desc: 'Live competition at Career Dialogue', final: true }
 ]
 

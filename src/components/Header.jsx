@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function Header({ theme, toggleTheme }) {
+  const [menuOpen, setMenuOpen] = useState(false)
+  const closeMenu = () => setMenuOpen(false)
+
   return (
     <header className="site-header">
       <div className="header-inner">
@@ -14,17 +17,19 @@ export default function Header({ theme, toggleTheme }) {
           </div>
         </a>
 
-        <nav className="main-nav">
-          <a href="#who-we-are">Who We Are</a>
-          <a href="#problems">The Problem</a>
-          <a href="#approach">Our Approach</a>
-          <a href="#programmes">Programmes</a>
+        <nav className={`main-nav ${menuOpen ? 'open' : ''}`}>
+          <a href="#about" onClick={closeMenu}>About</a>
+          <a href="#who-we-are" onClick={closeMenu}>Who We Are</a>
+          <a href="#problems" onClick={closeMenu}>The Problem</a>
+          <a href="#approach" onClick={closeMenu}>Our Approach</a>
+          <a href="#programmes" onClick={closeMenu}>Programmes</a>
+          <a href="#contact" className="btn-primary header-cta nav-cta" onClick={closeMenu}>Connect With Us</a>
         </nav>
 
         <div className="header-actions">
-          <button 
-            onClick={toggleTheme} 
-            className="theme-toggle" 
+          <button
+            onClick={toggleTheme}
+            className="theme-toggle"
             aria-label="Toggle light and dark mode"
             title={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} Mode`}
             id="btn-theme-toggle"
@@ -47,9 +52,21 @@ export default function Header({ theme, toggleTheme }) {
               </svg>
             )}
           </button>
-          <a href="#contact" className="btn-primary header-cta" id="link-header-contact">Connect With Us</a>
+          <a href="#contact" className="btn-primary header-cta desktop-cta" id="link-header-contact">Connect With Us</a>
+          <button
+            className={`hamburger-btn ${menuOpen ? 'open' : ''}`}
+            onClick={() => setMenuOpen((v) => !v)}
+            aria-label="Toggle navigation menu"
+            aria-expanded={menuOpen}
+            id="btn-mobile-menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </div>
+      {menuOpen && <div className="nav-overlay" onClick={closeMenu}></div>}
     </header>
   )
 }

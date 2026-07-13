@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Header from './components/Header'
 import TopSlideshow from './components/TopSlideshow'
 import Hero from './components/Hero'
+import About from './components/About'
 import WhoWeAre from './components/WhoWeAre'
 import Problems from './components/Problems'
 import Approach from './components/Approach'
@@ -48,6 +49,7 @@ export default function Home({ theme, toggleTheme }) {
       <main>
         <TopSlideshow />
         <Hero isVisible={!!visibleSections['hero']} />
+        <About isVisible={!!visibleSections['about']} />
         <WhoWeAre isVisible={!!visibleSections['who-we-are']} />
         <Problems isVisible={!!visibleSections['problems']} />
         <Approach isVisible={!!visibleSections['approach']} />
