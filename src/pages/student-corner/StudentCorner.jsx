@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom'
 import ThreePillars from './components/ThreePillars'
 import BicWorkflow from './components/BicWorkflow'
-import MonthlyCycle from './components/MonthlyCycle'
-import MonthlyThemes from './components/MonthlyThemes'
 import Stakeholders from './components/Stakeholders'
 import campusImage from '../../assets/slide2.png'
 import bicImage from '../../assets/slide3.png'
@@ -94,30 +92,6 @@ export default function StudentCorner() {
               <span className="sc-collage-caption">Bootcamp week — pitch coaching &amp; mentorship for the Top 5</span>
             </div>
           </div>
-        </section>
-
-        {/* Monthly cycle wheel */}
-        <section className="sc-section">
-          <div className="sc-section-header text-center">
-            <span className="sc-section-pre">The Rhythm</span>
-            <h2 className="sc-section-title">Monthly Innovation Cycle</h2>
-            <div className="sc-section-bar"></div>
-          </div>
-          <MonthlyCycle />
-        </section>
-
-        {/* Monthly themes */}
-        <section className="sc-section">
-          <div className="sc-section-header text-center">
-            <span className="sc-section-pre">12 Themes, 12 Months</span>
-            <h2 className="sc-section-title">Monthly Themes for Career Dialogues</h2>
-            <div className="sc-section-bar"></div>
-            <p className="sc-section-desc">
-              One theme drives Career Dialogue &amp; BIC focus each month, maximizing
-              stakeholder relevance and national alignment.
-            </p>
-          </div>
-          <MonthlyThemes />
         </section>
 
         {/* Stakeholder engagement */}
