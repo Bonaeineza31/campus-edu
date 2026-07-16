@@ -15,7 +15,7 @@
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0,0,0,0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   padding: 16px 40px;
   display: flex;
   align-items: center;
@@ -107,7 +107,7 @@
    Shared section header
    ===================== */
 .sc-section {
-  margin-bottom: 56px;
+  margin-bottom: 20px;
   opacity: 1;
   transform: none;
 }
@@ -533,12 +533,15 @@
   .sc-collage-main img {
     height: 240px;
   }
+
   .sc-collage.sc-collage-sm .sc-collage-main img {
     height: 200px;
   }
+
   .sc-collage-accent {
     width: 48%;
   }
+
   .sc-collage-accent img {
     height: 100px;
   }
@@ -567,10 +570,12 @@
 }
 
 @media (max-width: 860px) {
+
   .sc-split,
   .sc-split.reverse {
     grid-template-columns: 1fr;
   }
+
   .sc-split.reverse .sc-split-media {
     order: 0;
   }
