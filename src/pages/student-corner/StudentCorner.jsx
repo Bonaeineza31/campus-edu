@@ -28,7 +28,7 @@ export default function StudentCorner() {
           Student <span>Corner</span>
         </h1>
         <p className="sc-hero-desc">
-          Structured spaces for career dialogue, entrepreneurial thinking, 
+          Structured spaces for career dialogue, entrepreneurial thinking,
           and mentorship through a three-component framework.
         </p>
       </header>
@@ -57,7 +57,7 @@ export default function StudentCorner() {
             <div className="sc-section-bar"></div>
             <p className="sc-section-desc">
               Every month, Student Corner fuses career exposure, entrepreneurship competition,
-              and continuous mentorship into a single, self-renewing innovation cycle for
+              and Career Exhibition and Mentorship into a single, self-renewing innovation cycle for
               university students.
             </p>
           </div>

@@ -35,8 +35,8 @@ const pillars = [
   },
   {
     num: '03',
-    title: 'Career Exhibition and mentorship',
-    short: 'Online Course',
+    title: 'Career Exhibition and Mentorship',
+    short: 'Hybrid Course',
     subtitle: 'Year-round, for all applicants',
     lines: ['Coaching · training · community', 'Wraps around pillars 1 & 2'],
     accent: 'wrap',
