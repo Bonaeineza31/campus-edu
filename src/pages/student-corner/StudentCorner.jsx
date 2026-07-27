@@ -1,10 +1,7 @@
 import { Link } from 'react-router-dom'
 import ThreePillars from './components/ThreePillars'
-import BicWorkflow from './components/BicWorkflow'
 import Stakeholders from './components/Stakeholders'
 import campusImage from '../../assets/slide2.png'
-import bicImage from '../../assets/slide3.png'
-import workshopImage from '../../assets/slide4.png'
 import stakeholderImage from '../../assets/slide6.png'
 import ctaImage from '../../assets/slide1.png'
 import './student-corner.css'
@@ -51,7 +48,7 @@ export default function StudentCorner() {
           <div className="sc-section-header text-center">
             <span className="sc-section-pre">Methodology</span>
             <h2 className="sc-section-title">
-              One Ecosystem, Three Pillars, <span>One Monthly Cycle</span>
+              One Ecosystem, Four Pillars, <span>One Monthly Cycle</span>
             </h2>
             <div className="sc-section-bar"></div>
             <p className="sc-section-desc">
@@ -65,33 +62,13 @@ export default function StudentCorner() {
         {/* Three pillars */}
         <section className="sc-section">
           <div className="sc-section-header text-center">
-            <span className="sc-section-pre">The Three Pillars</span>
+            <span className="sc-section-pre">The Four Pillars</span>
             <h2 className="sc-section-title">How it all fits together</h2>
             <div className="sc-section-bar"></div>
           </div>
           <ThreePillars />
         </section>
 
-        {/* BIC workflow */}
-        <section className="sc-section">
-          <div className="sc-section-header text-center">
-            <span className="sc-section-pre">Pillar 02</span>
-            <h2 className="sc-section-title">Business Innovation Challenge — Workflow</h2>
-            <div className="sc-section-bar"></div>
-          </div>
-          <BicWorkflow />
-          <div className="sc-inline-banner">
-            <div className="sc-collage sc-collage-sm">
-              <div className="sc-collage-main">
-                <img src={bicImage} alt="A student exploring an innovation challenge with immersive tech" />
-              </div>
-              <div className="sc-collage-accent accent-left">
-                <img src={workshopImage} alt="Students receiving pitch coaching and mentorship during a bootcamp" />
-              </div>
-              <span className="sc-collage-caption">Bootcamp week — pitch coaching &amp; mentorship for the Top 5</span>
-            </div>
-          </div>
-        </section>
 
         {/* Stakeholder engagement */}
         <section className="sc-section">
