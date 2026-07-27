@@ -107,6 +107,7 @@
    Shared section header
    ===================== */
 .sc-section {
+  padding: 32px 0;
   margin-bottom: 20px;
   opacity: 1;
   transform: none;

@@ -3,9 +3,9 @@ import { Fragment } from 'react'
 const pillars = [
   {
     num: '01',
-    title: 'Career Dialogue',
-    subtitle: 'Monthly flagship event',
-    lines: ['3rd Thursday', 'Keynotes · exhibitions · networking'],
+    title: 'Career Dialogue Series',
+    subtitle: 'Monthly on the 3rd Thursday',
+    lines: ['Sector-specific guest speakers', 'Presentations & interactive dialogue'],
     accent: 'blue',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -20,8 +20,8 @@ const pillars = [
     num: '02',
     title: 'Business Innovation Challenge',
     short: 'BIC',
-    subtitle: 'Monthly startup competition',
-    lines: ['Idea → Seed → MVP tracks', 'Pitch · judge · award'],
+    subtitle: 'Monthly pitching competition',
+    lines: ['Shortlisted business ideas', 'Pitching to expert panel', 'Awards for top innovations'],
     accent: 'gold',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -35,10 +35,23 @@ const pillars = [
   },
   {
     num: '03',
-    title: 'Career Exhibition and Mentorship',
-    short: 'Hybrid Course',
-    subtitle: 'Year-round, for all applicants',
-    lines: ['Coaching · training · community', 'Wraps around pillars 1 & 2'],
+    title: 'Exhibition',
+    subtitle: 'Sector-specific showcase',
+    lines: ['Industry exhibitors', 'Interactive showcases', 'Participant networking'],
+    accent: 'blue',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+        <line x1="3" y1="9" x2="21" y2="9" />
+        <line x1="9" y1="21" x2="9" y2="9" />
+      </svg>
+    )
+  },
+  {
+    num: '04',
+    title: 'Mentorship Cohort',
+    subtitle: 'Sector-specific ongoing support',
+    lines: ['Monthly cohort intake', 'Structured mentorship sessions', 'Continuous professional growth'],
     accent: 'wrap',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
