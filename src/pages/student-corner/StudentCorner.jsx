@@ -28,8 +28,7 @@ export default function StudentCorner() {
           Student <span>Corner</span>
         </h1>
         <p className="sc-hero-desc">
-          Structured spaces for career dialogue, entrepreneurial thinking,
-          and mentorship through a three-component framework.
+          Student Corner initiative by The Campus EDU, which aims to bridge the gap between Rwandan university education and professional readiness. The initiative features three core pillars—career dialogues, business innovation challenges, and mentorship of student corner
         </p>
       </header>
 
