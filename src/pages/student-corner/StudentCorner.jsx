@@ -24,6 +24,7 @@ export default function StudentCorner() {
         <h1 className="sc-hero-title">
           Student <span>Corner</span>
         </h1>
+        <h2 className="sc-hero-slogan">From Campus to Career</h2>
         <p className="sc-hero-desc">
           Student Corner initiative by The Campus EDU, which aims to bridge the gap between Rwandan university education and professional readiness. The initiative features four core pillars—Career Dialogue Series, Business Innovation Challenge, Exhibition, and Mentorship.
         </p>
@@ -69,6 +70,20 @@ export default function StudentCorner() {
           <ThreePillars />
         </section>
 
+        {/* Event Highlights (Campus Quiz) */}
+        <section className="sc-section">
+          <div className="sc-inline-banner">
+            <div className="sc-collage sc-collage-sm">
+              <div className="sc-collage-main">
+                <img src="/campus_quiz_1.jpg" alt="Students engaging at The Campus Quiz 2025 event" />
+              </div>
+              <div className="sc-collage-accent accent-left">
+                <img src="/campus_quiz_2.jpg" alt="A speaker addressing students at The Campus Quiz 2025" />
+              </div>
+              <span className="sc-collage-caption">The Campus Quiz 2025 — Creating an informed and intellectually driven student community</span>
+            </div>
+          </div>
+        </section>
 
         {/* Stakeholder engagement */}
         <section className="sc-section">

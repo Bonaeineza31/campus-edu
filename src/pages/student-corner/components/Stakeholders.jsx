@@ -1,3 +1,6 @@
+import { useState } from 'react'
+import RegistrationModal from './RegistrationModal'
+
 const groups = [
   {
     title: 'Government institutions & TVETs',
@@ -55,6 +58,8 @@ const groups = [
 const roles = ['Exhibit', 'Speak', 'Judge', 'Mentor', 'Recruit', 'Partner']
 
 export default function Stakeholders() {
+  const [selectedRole, setSelectedRole] = useState(null)
+
   return (
     <div className="stakeholders-block">
       <div className="stakeholders-groups">
@@ -70,10 +75,23 @@ export default function Stakeholders() {
         <span className="stakeholder-roles-label">Roles, depending on the month's theme:</span>
         <div className="stakeholder-roles-list">
           {roles.map((r) => (
-            <span className="role-pill" key={r}>{r}</span>
+            <button 
+              className="role-pill" 
+              key={r}
+              onClick={() => setSelectedRole(r)}
+            >
+              {r}
+            </button>
           ))}
         </div>
       </div>
+
+      {selectedRole && (
+        <RegistrationModal 
+          role={selectedRole} 
+          onClose={() => setSelectedRole(null)} 
+        />
+      )}
     </div>
   )
 }
