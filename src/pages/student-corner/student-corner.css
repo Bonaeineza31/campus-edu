@@ -249,16 +249,10 @@
   margin-bottom: 14px;
 }
 
-.pillar-lines {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.pillar-lines span {
-  font-size: 0.92rem;
+.pillar-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
   color: var(--text-secondary, #666);
-  line-height: 1.5;
 }
 
 .pillar-flow-arrow {

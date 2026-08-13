@@ -25,7 +25,7 @@ export default function StudentCorner() {
           Student <span>Corner</span>
         </h1>
         <p className="sc-hero-desc">
-          Student Corner initiative by The Campus EDU, which aims to bridge the gap between Rwandan university education and professional readiness. The initiative features three core pillars—career dialogues, business innovation challenges, and mentorship of student corner
+          Student Corner initiative by The Campus EDU, which aims to bridge the gap between Rwandan university education and professional readiness. The initiative features four core pillars—Career Dialogue Series, Business Innovation Challenge, Exhibition, and Mentorship.
         </p>
       </header>
 

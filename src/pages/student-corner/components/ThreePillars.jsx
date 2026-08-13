@@ -5,7 +5,7 @@ const pillars = [
     num: '01',
     title: 'Career Dialogue Series',
     subtitle: 'Monthly on the 3rd Thursday',
-    lines: ['Sector-specific guest speakers', 'Presentations & interactive dialogue'],
+    description: 'A guest speaker who is an active professional in that edition\'s sector addresses participants, sharing practical insights and career pathways. This is complemented by a short presentation from the Student Corner Professional team giving a broader overview of the sector, its opportunities, and its trends.',
     accent: 'blue',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -21,7 +21,7 @@ const pillars = [
     title: 'Business Innovation Challenge',
     short: 'BIC',
     subtitle: 'Monthly pitching competition',
-    lines: ['Shortlisted business ideas', 'Pitching to expert panel', 'Awards for top innovations'],
+    description: 'The shortlisted top 5 finalists pitch their business ideas to a panel of judges in a structured competition, assessed on innovation, feasibility, and quality of presentation. The winning idea is awarded a prize by the guest speaker, linking sector expertise to the recognition of student talent.',
     accent: 'gold',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -37,7 +37,7 @@ const pillars = [
     num: '03',
     title: 'Exhibition',
     subtitle: 'Sector-specific showcase',
-    lines: ['Industry exhibitors', 'Interactive showcases', 'Participant networking'],
+    description: 'Exhibitors drawn from the sector of focus showcase their work to participants and the guest speaker, giving students hands-on exposure to how the sector functions in practice and creating space for networking with industry players.',
     accent: 'blue',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -51,7 +51,7 @@ const pillars = [
     num: '04',
     title: 'Mentorship Cohort',
     subtitle: 'Sector-specific ongoing support',
-    lines: ['Monthly cohort intake', 'Structured mentorship sessions', 'Continuous professional growth'],
+    description: 'At the close of each event, registration opens for a mentorship cohort tied to that edition\'s sector. Participants, particularly those with promising ideas from the BIC, enrol in a structured mentorship process where their ideas are shaped and developed further.',
     accent: 'wrap',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -75,11 +75,7 @@ export default function ThreePillars() {
               {p.short && <span className="pillar-short"> ({p.short})</span>}
             </h3>
             <p className="pillar-subtitle">{p.subtitle}</p>
-            <div className="pillar-lines">
-              {p.lines.map((l) => (
-                <span key={l}>{l}</span>
-              ))}
-            </div>
+            <p className="pillar-desc">{p.description}</p>
           </div>
           {i < pillars.length - 1 && (
             <div className="pillar-flow-arrow" aria-hidden="true">⇄</div>
