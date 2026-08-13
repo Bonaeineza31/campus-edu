@@ -646,20 +646,22 @@
   object-fit: cover;
 }
 
-.sc-collage-caption {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background: rgba(15, 23, 42, 0.7);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  color: #fff;
-  font-weight: 700;
-  font-size: 0.85rem;
-  padding: 8px 18px;
-  border-radius: 30px;
-  z-index: 10;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+.sc-event-desc {
+  text-align: center;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.sc-event-desc h4 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-primary, #1a1a2e);
+  margin-bottom: 8px;
+}
+
+.sc-event-desc p {
+  font-size: 1rem;
+  color: var(--text-secondary, #666);
 }
 
 /* =====================

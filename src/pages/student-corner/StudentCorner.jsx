@@ -80,7 +80,10 @@ export default function StudentCorner() {
               <div className="sc-collage-accent accent-left">
                 <img src="/campus_quiz_2.jpg" alt="A speaker addressing students at The Campus Quiz 2025" />
               </div>
-              <span className="sc-collage-caption">The Campus Quiz 2025 — Creating an informed and intellectually driven student community</span>
+            </div>
+            <div className="sc-event-desc">
+              <h4>Event Highlight: The Campus Quiz</h4>
+              <p>Creating an informed and intellectually driven student community.</p>
             </div>
           </div>
         </section>
