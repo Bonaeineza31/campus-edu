@@ -613,6 +613,15 @@
   border-radius: 16px;
 }
 
+.sc-collage.sc-collage-single {
+  max-width: 1000px;
+}
+
+.sc-collage.sc-collage-single .sc-collage-main {
+  width: 100%;
+  aspect-ratio: 21 / 9;
+}
+
 .sc-collage-accent {
   position: absolute;
   width: 45%;

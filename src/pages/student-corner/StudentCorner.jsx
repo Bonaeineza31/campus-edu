@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import ThreePillars from './components/ThreePillars'
 import Stakeholders from './components/Stakeholders'
-import campusImage from '../../assets/slide2.png'
 import stakeholderImage from '../../assets/slide6.png'
 import ctaImage from '../../assets/slide1.png'
 import './student-corner.css'
@@ -30,16 +29,12 @@ export default function StudentCorner() {
         </p>
       </header>
 
-      {/* Banner collage */}
+      {/* Hero Image */}
       <div className="sc-banner">
-        <div className="sc-collage">
+        <div className="sc-collage sc-collage-single">
           <div className="sc-collage-main">
             <img src="/happy_students.png" alt="Students collaborating at a career readiness and innovation session" />
           </div>
-          <div className="sc-collage-accent accent-right">
-            <img src={campusImage} alt="Students walking across the innovation hub campus" />
-          </div>
-          <span className="sc-collage-caption">Career readiness &amp; innovation, in session</span>
         </div>
       </div>
 
