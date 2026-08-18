@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom'
 import ThreePillars from './components/ThreePillars'
 import Stakeholders from './components/Stakeholders'
 import BicApplicationForm from './components/BicApplicationForm'
-import stakeholderImage from '../../assets/slide6.png'
-import ctaImage from '../../assets/slide1.png'
 import './student-corner.css'
 
 export default function StudentCorner() {
@@ -51,11 +49,14 @@ export default function StudentCorner() {
         </div>
       </header>
 
-      {/* Hero Image */}
+      {/* Hero Image — full cohort group photo */}
       <div className="sc-banner">
         <div className="sc-collage sc-collage-single">
           <div className="sc-collage-main">
-            <img src="/happy_students.png" alt="Students collaborating at a career readiness and innovation session" />
+            <img
+              src="/KNGL1378 copy.jpg.jpeg"
+              alt="The Campus EDU Student Corner cohort group photo"
+            />
           </div>
         </div>
       </div>
@@ -99,8 +100,8 @@ export default function StudentCorner() {
               </div>
             </div>
             <div className="sc-event-desc">
-              <h4>Event Highlight: The Campus Quiz</h4>
-              <p>Creating an informed and intellectually driven student community.</p>
+              <h4>Event Highlight: The Campus Quiz 2025</h4>
+              <p>Creating an informed and intellectually driven student community — one quiz at a time.</p>
             </div>
           </div>
         </section>
@@ -116,10 +117,16 @@ export default function StudentCorner() {
             <div className="sc-split-media">
               <div className="sc-collage sc-collage-sm">
                 <div className="sc-collage-main">
-                  <img src={stakeholderImage} alt="Stakeholders networking at a mentorship symposium" />
+                  <img
+                    src="/KNGL1386 copy.jpg.jpeg"
+                    alt="Campus EDU team with stakeholders at an outdoor engagement session"
+                  />
                 </div>
                 <div className="sc-collage-accent accent-right">
-                  <img src={ctaImage} alt="Students and mentors reviewing data during a design session" />
+                  <img
+                    src="/KNGL1310 copy.jpg.jpeg"
+                    alt="Student presenters in front of The Campus EDU banner"
+                  />
                 </div>
               </div>
             </div>
@@ -129,8 +136,11 @@ export default function StudentCorner() {
           </div>
         </section>
 
-        {/* Closing CTA */}
-        <section className="sc-cta" style={{ backgroundImage: `url(${ctaImage})` }}>
+        {/* Closing CTA — uses speaker photo as background */}
+        <section
+          className="sc-cta"
+          style={{ backgroundImage: `url('/KNGL1394 copy.jpg.jpeg')` }}
+        >
           <div className="sc-cta-overlay"></div>
           <div className="sc-cta-inner">
             <h3>Ready to be part of the next cycle?</h3>
@@ -139,6 +149,7 @@ export default function StudentCorner() {
           </div>
         </section>
       </main>
+
       {/* Render the BIC Form Modal */}
       {isBicFormOpen && (
         <BicApplicationForm onClose={() => setIsBicFormOpen(false)} />
