@@ -110,7 +110,7 @@ export default function StudentCorner() {
         <section className="sc-section">
           <div className="sc-section-header text-center">
             <span className="sc-section-pre">Stakeholder Engagement</span>
-            <h2 className="sc-section-title">Invited each month, by theme</h2>
+            <h2 className="sc-section-title">Invited each month, by <span>sector</span></h2>
             <div className="sc-section-bar"></div>
           </div>
           <div className="sc-split reverse">

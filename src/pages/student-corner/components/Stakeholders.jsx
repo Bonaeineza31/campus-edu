@@ -55,13 +55,22 @@ const groups = [
   }
 ]
 
-const roles = ['Exhibit', 'Speak', 'Judge', 'Mentor', 'Innovator', 'Partner']
+const roles = [
+  { label: 'Mentor',     emoji: '🎓', color: '#4d90e8', desc: 'Guide young innovators' },
+  { label: 'Judge',      emoji: '⚖️', color: '#7c3aed', desc: 'Evaluate the best ideas' },
+  { label: 'Speaker',    emoji: '🎤', color: '#e53e3e', desc: 'Inspire with your story' },
+  { label: 'Exhibitor',  emoji: '🚀', color: '#38a169', desc: 'Showcase what you\'ve built' },
+  { label: 'Partner',    emoji: '🤝', color: '#ed8936', desc: 'Grow together with us' },
+  { label: 'Innovator',  emoji: '💡', color: '#fbb03b', desc: 'Bring your big idea' },
+]
 
 export default function Stakeholders() {
   const [selectedRole, setSelectedRole] = useState(null)
 
   return (
     <div className="stakeholders-block">
+
+      {/* Who we invite */}
       <div className="stakeholders-groups">
         {groups.map((g) => (
           <div className="stakeholder-card" key={g.title}>
@@ -71,16 +80,30 @@ export default function Stakeholders() {
         ))}
       </div>
 
-      <div className="stakeholder-roles">
-        <span className="stakeholder-roles-label">Roles, depending on the month's Sector:</span>
-        <div className="stakeholder-roles-list">
+      {/* Participation CTA */}
+      <div className="sh-participate">
+        <div className="sh-participate-header">
+          <span className="sh-participate-spark">✨</span>
+          <div>
+            <h4 className="sh-participate-title">Want to participate?</h4>
+            <p className="sh-participate-sub">
+              Roles vary depending on the month's sector — pick yours and let's connect!
+            </p>
+          </div>
+        </div>
+
+        <div className="sh-role-grid">
           {roles.map((r) => (
             <button
-              className="role-pill"
-              key={r}
-              onClick={() => setSelectedRole(r)}
+              key={r.label}
+              className="sh-role-card"
+              style={{ '--role-color': r.color }}
+              onClick={() => setSelectedRole(r.label)}
             >
-              {r}
+              <span className="sh-role-emoji">{r.emoji}</span>
+              <span className="sh-role-label">{r.label}</span>
+              <span className="sh-role-desc">{r.desc}</span>
+              <span className="sh-role-arrow">→</span>
             </button>
           ))}
         </div>
