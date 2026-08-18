@@ -4,7 +4,7 @@ const pillars = [
   {
     num: '01',
     title: 'Career Dialogue Series',
-    subtitle: 'Monthly on the 3rd Thursday',
+    subtitle: 'Monthly',
     description: 'A guest speaker who is an active professional in that edition\'s sector addresses participants, sharing practical insights and career pathways. This is complemented by a short presentation from the Student Corner Professional team giving a broader overview of the sector, its opportunities, and its trends.',
     accent: 'blue',
     icon: (
@@ -49,7 +49,7 @@ const pillars = [
   },
   {
     num: '04',
-    title: 'Mentorship Cohort',
+    title: 'Mentorship Program',
     subtitle: 'Sector-specific ongoing support',
     description: 'At the close of each event, registration opens for a mentorship cohort tied to that edition\'s sector. Participants, particularly those with promising ideas from the BIC, enrol in a structured mentorship process where their ideas are shaped and developed further.',
     accent: 'wrap',

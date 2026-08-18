@@ -1,0 +1,266 @@
+/* bic-form.css */
+.bic-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(11, 22, 40, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.bic-modal-content {
+  background: var(--bg-card, #ffffff);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 800px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUpModal 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  overflow: hidden;
+}
+
+.bic-modal-header {
+  padding: 24px 32px;
+  border-bottom: 1px solid var(--border-color, #eaeef3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-primary, #fff);
+  z-index: 2;
+}
+
+.bic-header-text h2 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-primary, #1a1a2e);
+  margin-bottom: 4px;
+}
+
+.bic-header-text p {
+  font-size: 0.9rem;
+  color: var(--text-secondary, #666);
+}
+
+.bic-modal-close {
+  background: rgba(0, 0, 0, 0.05);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary, #666);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.bic-modal-close:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #1a1a2e;
+}
+
+.bic-progress-bar {
+  height: 4px;
+  background: var(--border-color, #eaeef3);
+  width: 100%;
+}
+
+.bic-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4d90e8, #fbb03b);
+  transition: width 0.3s ease;
+}
+
+.bic-modal-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 32px;
+  background: var(--bg-primary, #fff);
+}
+
+.bic-step-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #4d90e8;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.bic-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.bic-form-group {
+  margin-bottom: 20px;
+}
+
+.bic-form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.bic-form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary, #1a1a2e);
+  margin-bottom: 8px;
+}
+
+.bic-form-group label span {
+  color: #e53935;
+  margin-left: 4px;
+}
+
+.bic-form-group input,
+.bic-form-group select,
+.bic-form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--bg-tertiary, #f8f9fa);
+  border: 1px solid var(--border-color, #eaeef3);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: var(--text-primary, #1a1a2e);
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.bic-form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.bic-form-group input:focus,
+.bic-form-group select:focus,
+.bic-form-group textarea:focus {
+  outline: none;
+  border-color: #4d90e8;
+  box-shadow: 0 0 0 4px rgba(77, 144, 232, 0.1);
+}
+
+.bic-checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.bic-checkbox-group input[type="checkbox"],
+.bic-checkbox-group input[type="radio"] {
+  width: auto;
+  margin-top: 4px;
+}
+
+.bic-checkbox-group label {
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: none;
+  margin: 0;
+}
+
+.bic-file-upload {
+  border: 2px dashed var(--border-color, #eaeef3);
+  padding: 24px;
+  border-radius: 10px;
+  text-align: center;
+  background: var(--bg-tertiary, #f8f9fa);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.bic-file-upload:hover {
+  border-color: #4d90e8;
+  background: rgba(77, 144, 232, 0.05);
+}
+
+.bic-modal-footer {
+  padding: 20px 32px;
+  border-top: 1px solid var(--border-color, #eaeef3);
+  display: flex;
+  justify-content: space-between;
+  background: var(--bg-primary, #fff);
+  z-index: 2;
+}
+
+.bic-btn {
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.bic-btn-secondary {
+  background: var(--bg-tertiary, #f8f9fa);
+  color: var(--text-primary, #1a1a2e);
+  border: 1px solid var(--border-color, #eaeef3);
+}
+
+.bic-btn-secondary:hover {
+  background: #eaeef3;
+}
+
+.bic-btn-primary {
+  background: #4d90e8;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(77, 144, 232, 0.25);
+}
+
+.bic-btn-primary:hover {
+  background: #3b7bc4;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(77, 144, 232, 0.35);
+}
+
+@media (max-width: 768px) {
+  .bic-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dark theme additions */
+.theme-dark .bic-modal-content {
+  background: #101726;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.theme-dark .bic-modal-header,
+.theme-dark .bic-modal-footer,
+.theme-dark .bic-modal-body {
+  background: #101726;
+}
+
+.theme-dark .bic-form-group input,
+.theme-dark .bic-form-group select,
+.theme-dark .bic-form-group textarea {
+  background: rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+.theme-dark .bic-file-upload {
+  background: rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-dark .bic-btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}

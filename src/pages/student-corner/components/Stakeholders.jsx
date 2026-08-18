@@ -55,7 +55,7 @@ const groups = [
   }
 ]
 
-const roles = ['Exhibit', 'Speak', 'Judge', 'Mentor', 'Recruit', 'Partner']
+const roles = ['Exhibit', 'Speak', 'Judge', 'Mentor', 'Innovator', 'Partner']
 
 export default function Stakeholders() {
   const [selectedRole, setSelectedRole] = useState(null)
@@ -72,11 +72,11 @@ export default function Stakeholders() {
       </div>
 
       <div className="stakeholder-roles">
-        <span className="stakeholder-roles-label">Roles, depending on the month's theme:</span>
+        <span className="stakeholder-roles-label">Roles, depending on the month's Sector:</span>
         <div className="stakeholder-roles-list">
           {roles.map((r) => (
-            <button 
-              className="role-pill" 
+            <button
+              className="role-pill"
               key={r}
               onClick={() => setSelectedRole(r)}
             >
@@ -87,9 +87,9 @@ export default function Stakeholders() {
       </div>
 
       {selectedRole && (
-        <RegistrationModal 
-          role={selectedRole} 
-          onClose={() => setSelectedRole(null)} 
+        <RegistrationModal
+          role={selectedRole}
+          onClose={() => setSelectedRole(null)}
         />
       )}
     </div>

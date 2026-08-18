@@ -1,11 +1,15 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import ThreePillars from './components/ThreePillars'
 import Stakeholders from './components/Stakeholders'
+import BicApplicationForm from './components/BicApplicationForm'
 import stakeholderImage from '../../assets/slide6.png'
 import ctaImage from '../../assets/slide1.png'
 import './student-corner.css'
 
 export default function StudentCorner() {
+  const [isBicFormOpen, setIsBicFormOpen] = useState(false)
+
   return (
     <div className="sc-page">
       {/* Top navigation bar */}
@@ -27,6 +31,15 @@ export default function StudentCorner() {
         <p className="sc-hero-desc">
           Student Corner initiative by The Campus EDU, which aims to bridge the gap between Rwandan university education and professional readiness. The initiative features four core pillars—Career Dialogue Series, Business Innovation Challenge, Exhibition, and Mentorship.
         </p>
+        <div style={{ marginTop: '30px' }}>
+          <button 
+            className="bic-btn bic-btn-primary" 
+            onClick={() => setIsBicFormOpen(true)}
+            style={{ padding: '14px 32px', fontSize: '1.1rem' }}
+          >
+            Apply for BIC Challenge
+          </button>
+        </div>
       </header>
 
       {/* Hero Image */}
@@ -117,6 +130,10 @@ export default function StudentCorner() {
           </div>
         </section>
       </main>
+      {/* Render the BIC Form Modal */}
+      {isBicFormOpen && (
+        <BicApplicationForm onClose={() => setIsBicFormOpen(false)} />
+      )}
     </div>
   )
 }
