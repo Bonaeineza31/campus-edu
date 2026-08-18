@@ -59,7 +59,12 @@ export default function BicApplicationForm({ onClose }) {
                 </div>
                 <div className="bic-form-group">
                   <label>Date of Birth<span>*</span></label>
-                  <input type="date" required />
+                  <input 
+                    type="date" 
+                    required 
+                    max="2010-12-31" 
+                    title="You must be at least 16 years old to apply." 
+                  />
                 </div>
                 <div className="bic-form-group">
                   <label>Nationality<span>*</span></label>
@@ -79,7 +84,12 @@ export default function BicApplicationForm({ onClose }) {
                 </div>
                 <div className="bic-form-group">
                   <label>Email Address<span>*</span></label>
-                  <input type="email" required />
+                  <input 
+                    type="email" 
+                    required 
+                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" 
+                    title="Please enter a valid email address (e.g., name@example.com)"
+                  />
                 </div>
                 <div className="bic-form-group">
                   <label>District<span>*</span></label>
