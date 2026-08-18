@@ -18,7 +18,16 @@ export default function StudentCorner() {
           <img src="/logo.png" alt="The Campus EDU Logo" className="sc-topbar-logo" />
           THE CAMPUS EDU
         </a>
-        <Link to="/" className="sc-topbar-back">← Back to Home</Link>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+          <button 
+            className="bic-btn bic-btn-primary glowing-btn" 
+            onClick={() => setIsBicFormOpen(true)}
+            style={{ padding: '8px 20px', fontSize: '0.9rem' }}
+          >
+            Apply Now for BIC
+          </button>
+          <Link to="/" className="sc-topbar-back">← Back to Home</Link>
+        </div>
       </nav>
 
       {/* Hero */}
