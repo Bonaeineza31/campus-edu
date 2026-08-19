@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import Header from './components/Header'
 import TopSlideshow from './components/TopSlideshow'
 import Hero from './components/Hero'
@@ -13,6 +14,17 @@ import './home.css'
 
 export default function Home({ theme, toggleTheme }) {
   const [visibleSections, setVisibleSections] = useState({})
+  const location = useLocation()
+
+  // When arriving via a link like "/#contact" (e.g. from Student Corner),
+  // React Router doesn't auto-scroll to the hash like a normal page load would.
+  useEffect(() => {
+    if (!location.hash) return
+    const el = document.getElementById(location.hash.slice(1))
+    if (el) {
+      requestAnimationFrame(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }))
+    }
+  }, [location.hash, location.key])
 
   // Intersection observer for section scroll-revealing animations
   useEffect(() => {
