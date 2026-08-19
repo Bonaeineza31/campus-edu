@@ -21,9 +21,7 @@ export default function Home({ theme, toggleTheme }) {
   useEffect(() => {
     if (!location.hash) return
     const el = document.getElementById(location.hash.slice(1))
-    if (el) {
-      requestAnimationFrame(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }))
-    }
+    if (el) el.scrollIntoView({ behavior: 'instant', block: 'start' })
   }, [location.hash, location.key])
 
   // Intersection observer for section scroll-revealing animations
