@@ -138,7 +138,6 @@ export default function Stakeholders() {
       {/* Participation CTA */}
       <div className="sh-participate">
         <div className="sh-participate-header">
-          <span className="sh-participate-spark">✨</span>
           <div>
             <h4 className="sh-participate-title">Want to participate?</h4>
             <p className="sh-participate-sub">

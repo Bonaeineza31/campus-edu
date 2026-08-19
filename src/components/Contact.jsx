@@ -128,14 +128,14 @@ export default function Contact({ isVisible }) {
               <div className="office-card-icon"><MdPhone /></div>
               <div>
                 <strong>Phone</strong>
-                <span>+250 798 287 944</span>
+                <span>+250 795 388 910</span>
               </div>
             </div>
             <div className="office-info-card">
               <div className="office-card-icon"><MdEmail /></div>
               <div>
                 <strong>Email</strong>
-                <span>info@thecampusedu.com</span>
+                <span>thecampusrw@gmail.com</span>
               </div>
             </div>
           </div>
