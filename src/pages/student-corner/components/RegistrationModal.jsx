@@ -4,7 +4,13 @@ import '../student-corner.css'
 /* ─── Role configuration ─────────────────────────────────────────────────── */
 const ROLE_CONFIG = {
   Mentor: {
-    emoji: '🎓',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <polygon points="12 3 2 8 12 13 22 8 12 3" />
+        <path d="M6 10v5c0 1.5 2.5 3 6 3s6-1.5 6-3v-5" />
+        <line x1="22" y1="8" x2="22" y2="14" />
+      </svg>
+    ),
     color: '#4d90e8',
     tagline: 'Share your wisdom. Shape the next generation.',
     fields: [
@@ -15,7 +21,14 @@ const ROLE_CONFIG = {
     ]
   },
   Judge: {
-    emoji: '⚖️',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M9 2h6a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z" />
+        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+        <line x1="8" y1="12" x2="16" y2="12" />
+        <line x1="8" y1="16" x2="13" y2="16" />
+      </svg>
+    ),
     color: '#7c3aed',
     tagline: 'Evaluate boldly. Elevate the best ideas.',
     fields: [
@@ -26,7 +39,14 @@ const ROLE_CONFIG = {
     ]
   },
   Speaker: {
-    emoji: '🎤',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
+        <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+        <line x1="12" y1="19" x2="12" y2="23" />
+        <line x1="8" y1="23" x2="16" y2="23" />
+      </svg>
+    ),
     color: '#e53e3e',
     tagline: 'Your voice can ignite a thousand ideas.',
     fields: [
@@ -37,7 +57,13 @@ const ROLE_CONFIG = {
     ]
   },
   Exhibitor: {
-    emoji: '🚀',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+        <line x1="3" y1="9" x2="21" y2="9" />
+        <line x1="9" y1="21" x2="9" y2="9" />
+      </svg>
+    ),
     color: '#38a169',
     tagline: 'Show the world what you\'ve built.',
     fields: [
@@ -49,7 +75,14 @@ const ROLE_CONFIG = {
     ]
   },
   Partner: {
-    emoji: '🤝',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      </svg>
+    ),
     color: '#ed8936',
     tagline: 'Build something bigger — together.',
     fields: [
@@ -60,7 +93,11 @@ const ROLE_CONFIG = {
     ]
   },
   Innovator: {
-    emoji: '💡',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+      </svg>
+    ),
     color: '#fbb03b',
     tagline: 'Got an idea? This is your stage.',
     fields: [
@@ -169,7 +206,7 @@ export default function RegistrationModal({ role, onClose }) {
 
   return (
     <div className="sc-modal-overlay" onClick={onClose}>
-      <div className="sc-modal-content rm-modal" onClick={e => e.stopPropagation()}>
+      <div className="sc-modal-content rm-modal" style={{ '--role-color': config.color }} onClick={e => e.stopPropagation()}>
         <button className="sc-modal-close" onClick={onClose} aria-label="Close">×</button>
 
         {submitted ? (
@@ -191,7 +228,7 @@ export default function RegistrationModal({ role, onClose }) {
 
             {/* Header */}
             <div className="rm-header" style={{ borderTop: `4px solid ${config.color}` }}>
-              <span className="rm-emoji">{config.emoji}</span>
+              <span className="rm-icon" style={{ '--role-color': config.color }}>{config.icon}</span>
               <div>
                 <h3 className="rm-title">Join as a <span style={{ color: config.color }}>{role}</span></h3>
                 <p className="rm-tagline">{config.tagline}</p>

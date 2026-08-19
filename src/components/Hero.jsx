@@ -30,7 +30,7 @@ export default function Hero({ isVisible }) {
       <div className="hero-image-panel animate-float">
         <div className="glowing-border">
           <div className="inner-display img-container">
-            <img src="/happy_students.png" alt="Happy Rwandan students collaborating" className="hero-photo" />
+            <img src="/KNGL1317 copy.jpg (1).jpeg" alt="Rwandan students collaborating on laptops during a Campus EDU session" className="hero-photo" />
             <div className="floating-badge fb-1">
               <span className="fb-icon">🎓</span>
               <div className="fb-text">
